@@ -29,13 +29,13 @@ int main() {
         error_routine_status_code("execle error", error);
     } else { // Main process
         for (int i = 0;i < 5;i++) {
-            printf("Parent\n");
+            printf("%s", "Parent\n");
             sleep(1);
         }
         if (waitpid(pid1, NULL, 0) != pid1) {
             error_routine("waitpid error");
         }
-        printf("Child finished");
+        printf("%s", "Child finished");
     }
     return 0;
 }
