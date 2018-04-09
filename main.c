@@ -7,13 +7,13 @@
 #include <stdlib.h>
 
 void error_routine(char* error_message) {
-    printf("%s", error_message);
-    exit(1);
+    printf("%s\n", error_message);
+    exit(EXIT_FAILURE);
 }
 
 void error_routine_status_code(char* error_message, int status) {
-    printf("%s %d", error_message, status);
-    exit(1);
+    printf("%s %d\n", error_message, status);
+    exit(status);
 }
 
 int main() {
